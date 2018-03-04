@@ -71,7 +71,14 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-    </dependencies>
+		<!-- 用GSON解析Json格式数据 -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+
+	</dependencies>
 
 	<build>
 		<plugins>

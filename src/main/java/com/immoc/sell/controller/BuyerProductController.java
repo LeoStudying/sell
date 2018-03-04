@@ -6,7 +6,7 @@ import com.immoc.sell.VO.ResultVo;
 import com.immoc.sell.dataobject.ProductCategory;
 import com.immoc.sell.dataobject.ProductInfo;
 import com.immoc.sell.service.ProductCategoryService;
-import com.immoc.sell.service.ProductInfoService;
+import com.immoc.sell.service.ProductService;
 import com.immoc.sell.utils.ResultVoUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 public class BuyerProductController {
 
     @Autowired
-    private ProductInfoService productInfoService;
+    private ProductService productService;
 
     @Autowired
     private ProductCategoryService productCategoryService;
@@ -38,7 +38,7 @@ public class BuyerProductController {
     @GetMapping("/list")
     public ResultVo list() {
         //1, 查询所有的上架商品
-        List<ProductInfo> productInfoList = productInfoService.findUpAll();
+        List<ProductInfo> productInfoList = productService.findUpAll();
 
         //2, 查询类目(一次性查询)
         //List<Integer> categoryTypeList = new ArrayList<>();
