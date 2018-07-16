@@ -10,7 +10,7 @@ import lombok.Getter;
  * @create 2018-02-10 下午 10:47
  */
 @Getter
-public enum  ProductStatusEnum {
+public enum ProductStatusEnum {
     UP(0, "上架商品"),
     Down(1, "下架商品")
     ;
@@ -23,4 +23,6 @@ public enum  ProductStatusEnum {
         this.code = code;
         this.message = message;
     }
+
+
 }
